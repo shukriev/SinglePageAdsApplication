@@ -1,5 +1,8 @@
-<ul>
-	<li ng-repeat="ad in ads.ads" class="box">
+<pagination total-items="ads.numItems" ng-model="adsParams.startPage" item-per-page="adsParams.pageSize" ng-change="reloadAds()" max-size="9" boundary-links="true">
+</pagination>
+
+<ul class="ads">
+	<li ng-repeat="ad in ads.ads" class="box" data-id="{{ad.id}}">
 		<h1>{{ad.title}}</h1>
 		<div><strong>Date:</strong> {{ad.date | date: 'dd-MM-yyyy'}} </div>
 		<div ng-if='ad.imageDataUrl'>
