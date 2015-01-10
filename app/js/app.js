@@ -19,7 +19,7 @@ app.config(function ($routeProvider) {
 
     $routeProvider.when('/register', {
         templateUrl: 'templates/register.html',
-        controller: 'Registercontroller'
+        controller: 'RegisterController'
     });
     
     $routeProvider.otherwise(
