@@ -30,13 +30,13 @@ app.config(function ($routeProvider) {
     $routeProvider.otherwise(
         { redirectTo: '/' }
     );
+});
 
-    app.run(function ($rootScope, $location, authService) {
-        $rootScope.$on('$locationChangeStart', function (event){
-            if ($location.path().indexOf('/user/') != -1 && !authService.isLoggedIn()) {
-                $location.path('/');
-            };
-        });
+
+app.run(function ($rootScope, $location, authService) {
+    $rootScope.$on('$locationChangeStart', function (event){
+        if ($location.path().indexOf('/user/') != -1 && !authService.isLoggedIn()) {
+            $location.path('/');
+        };
     });
-
 });
