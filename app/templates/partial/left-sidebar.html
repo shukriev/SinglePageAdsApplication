@@ -1,11 +1,9 @@
 <!-- Anonymous site visiotrs -->
-<div ng-if="authService.isAnonymous()" class="box">
-	<h2>Navigation</h2>
-	<ul>
-		<li><a href="#/">Home</a></li>
-		<li><a href="#/login">Login</a></li>
-		<li><a href="#/register">Register</a></li>
-	</ul>
+<div class="box" ng-if="authService.isAnonymous()">
+  <h2>Navigation</h2>
+  <ul class="sidebar-menu">
+      <li><a href="#/">Home</a></li>
+  </ul>
 </div>
 
 <!-- Login/Register for anonymous site visitors -->
@@ -17,14 +15,14 @@
 
 <!-- Navigation box for logged in normal user -->
 
-<div ng-if="authService.isNormalUser" class="box">
+<div ng-if="authService.isNormalUser()" class="box">
 	<h2>Navigation</h2>
-	<ul>
-		<li><a href="#/user/home">Home</a></li>
-		<li><a href="#/user/ads">My Ads</a></li>
-		<li><a href="#/user/publish">Publish</a></li>
-		<li><a href="#/user/profile">Edit profile</a></li>
-		<li><a ng-click="logout()">Logout</a></li>
+	<ul class="sidebar-menu">
+		<li><a href="#/user/home" class="button">Home</a></li>
+		<li><a href="#/user/ads" class="button">My Ads</a></li>
+		<li><a href="#/user/ads/publish" class="button">Publish</a></li>
+		<li><a href="#/user/profile" class="button">Edit profile</a></li>
+		<li><a ng-click="logout()" class="button">Logout</a></li>
 	</ul> 
 </div>
 
@@ -33,20 +31,11 @@
 <div ng-if="authService.isAdmin()" class="box">
 	<h2>Administrator</h2>
     <ul class="sidebar-menu">
-        <li><a href="#/admin/ads">Ads</a></li>
-        <li><a href="#/admin/users">Users</a></li>
-        <li><a href="#/admin/categories">Categories</a></li>
-        <li><a href="#/admin/towns">Towns</a></li>
-        <li><a ng-click="logout()">Logout</a></li>
+        <li><a href="#/admin/ads" class="button">Ads</a></li>
+        <li><a href="#/admin/users" class="button">Users</a></li>
+        <li><a href="#/admin/categories" class="button">Categories</a></li>
+        <li><a href="#/admin/towns" class="button">Towns</a></li>
+        <li><a ng-click="logout()" class="button">Logout</a></li>
     </ul>
 </div>
 
-<!-- Navigation box for anonymous site visitors -->
-<div class="box">
-  <h2>Navigation</h2>
-  <ul class="sidebar-menu">
-      <li><a href="#/">Home</a></li>
-      <li><a href="#/login">Login</a></li>
-      <li><a href="#/register">Register</a></li>
-  </ul>
-</div>

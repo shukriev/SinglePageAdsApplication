@@ -15,9 +15,7 @@ app.factory('adsService',
           return adsResource.getAll(params, success, error);
         }
       };
-  }
-
-    
+    }
 );
 
 app.factory('townsService',

@@ -32,6 +32,26 @@ app.config(function ($routeProvider) {
         controller: 'UserAdsController'
     });
     
+    $routeProvider.when('/user/profile', {
+        templateUrl: 'templates/user/edit-user-profile.html',
+        controller: 'UserProfileController'
+    });
+
+    $routeProvider.when('/user/ads/delete/:id', {
+        templateUrl: 'templates/user/delete-user-ad.html',
+        controller: 'UserDeleteAdController'
+    });
+
+    $routeProvider.when('/user/ads/edit/:id', {
+        templateUrl: 'templates/user/edit-user-ad.html',
+        controller: 'UserEditAdController'
+    });
+
+    $routeProvider.when('/user/ads/changePassword/', {
+        templateUrl: 'templates/user/change-user-password.html',
+        controller: 'UserChangePasswordController'
+    });
+
     $routeProvider.otherwise(
         { redirectTo: '/' }
     );
