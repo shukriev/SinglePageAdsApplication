@@ -31,7 +31,7 @@ app.controller('UserProfileController',
                     $location.path("/user/home");
                 },
                 function error(err) {
-                    notifyService.showError('Cannot edit profile');
+                    notifyService.showError('Cannot edit profile', err);
                 }
             )
         };

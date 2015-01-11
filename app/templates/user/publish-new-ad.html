@@ -1,35 +1,35 @@
-<div class="box">
+<div class="box editInfo">
  	<h2>Publish New Ad</h2>
  	<p>
-     	<label for="title">Title:</label>
-     	<input type="text" id="title" ng-model="adData.title" required />
+     	<label for="title" class="col-sm-2 control-label">Title:</label>
+     	<input type="text" id="title" ng-model="adData.title" required class="form-control selectBoxSize"/>
   	</p>
 
  	<p>
-     	<label for="text">Text:</label>
-   		<input type="text" id="text" ng-model="adData.text" required />
+     	<label for="text" class="col-sm-2 control-label">Text:</label>
+   		<input type="text" id="text" ng-model="adData.text" required class="form-control selectBoxSize"/>
  	</p>
 
  	<p>
-     	<label for="category">Category:</label>
-     	<select id="category" ng-model="adData.categoryId">
+     	<label for="category" class="col-sm-2 control-label">Category:</label>
+     	<select id="category" ng-model="adData.categoryId" class="form-control selectBoxSize">
          	<option value="null">(None)</option>
          	<option ng-repeat="c in categories" value="{{c.id}}">{{c.name}}</option>
       	</select>
   	</p>
 
 	<p>
-		<label for="town">Town:</label>
-		<select id="town" ng-model="userData.townId">
+		<label for="town" class="col-sm-2 control-label">Town:</label>
+		<select id="town" ng-model="userData.townId" class="form-control selectBoxSize">
 			<option value="null">(none)</option>
 			<option ng-repeat="town in towns" value="{{tonw.id}}">{{town.name}}</option>
 		</select>
 	</p>
 
   <p>
-    <label for="image">Image:</label>
-    <input type="file" id="image" onchange="angular.element(this).scope().fileSelected(this)" />
-    <div class="image-box">
+    <label for="image" class="col-sm-2 control-label">Image</label>
+    <input type="file" id="image" onchange="angular.element(this).scope().fileSelected(this)" class="form-control selectBoxSize"/>
+    <div class="image-box" style="margin-left:190px;">
         <p>Image Preview</p>
     </div>
   </p>
