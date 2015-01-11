@@ -1,17 +1,19 @@
 <div class="box">
   <h2>Login</h2>
-  <p>
-  	<label for="username">Username:</label>
-  	<input type="text" id="username" ng-model="userData.username" required />
-  </p>
+  <div class="editInfo">
+    <p>
+    	<label for="username" class="col-sm-2 control-label">Username:</label>
+    	<input type="text" id="username" ng-model="userData.username" required  class="form-control selectBoxSize"/>
+    </p>
 
-  <p>
-  	<label for="password">Password:</label>
-  	<input type="password" id="password" ng-model="userData.password" required/>
-  </p>
+    <p>
+    	<label for="password" class="col-sm-2 control-label">Password:</label>
+    	<input type="password" id="password" ng-model="userData.password" required class="form-control selectBoxSize"/>
+    </p>
 
-  <p>
-  	<a ng-click="login(userData)" class="button">Login</a>
-  	<a href="#/register" class="link">Register</a>
-  </p>
+    <p>
+    	<a ng-click="login(userData)" class="button">Login</a>
+    	<a href="#/register" class="link">Register</a>
+    </p>
+</div>
 </div>

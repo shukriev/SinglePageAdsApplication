@@ -191,7 +191,6 @@ ul.sidebar-menu li a, ul.sidebar-menu li a:focus {
     font-size: 30px;
     margin-bottom: 0;
     width: 300px;
-
 }
 
 .mainInformation {
@@ -207,10 +206,16 @@ ul.sidebar-menu li a, ul.sidebar-menu li a:focus {
     border-radius: 20px;
     padding-left: 15px;
     padding-right: 15px;
-
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
 }
+
 .mainInformation > .tricky {
     background-color:#A9D18E;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
 }
 
 .titleAndImage > #time {
@@ -222,6 +227,9 @@ ul.sidebar-menu li a, ul.sidebar-menu li a:focus {
     padding-left: 15px;
     padding-right: 15px;
     width: 180px;
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
 }
 
 .imageMine {
@@ -231,4 +239,15 @@ ul.sidebar-menu li a, ul.sidebar-menu li a:focus {
     background-color: rgb(147, 197, 113);
     border-bottom-right-radius: 15px;
     border-top-left-radius: 15px;
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+}
+.editInfo label {
+    font-size: 20px;
+    text-align: left;
+}
+
+.selectBoxSize{
+    width: 200px;
 }

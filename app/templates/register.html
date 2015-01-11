@@ -1,38 +1,38 @@
-<div class="box">
+<div class="box editInfo">
   <h2>Register</h2>
 	<p>	
-		<label for="username">Username:</label>
-		<input type="text" id="username" ng-model="userData.username" required />
+		<label for="username" class="col-sm-2 control-label">Username:</label>
+		<input type="text" id="username" ng-model="userData.username" required class="form-control selectBoxSize"/>
 	</p>
   	<p>
-  		<label for="password">Password:</label>
-  		<input type="password" id="password" ng-model="userData.password" required />
+  		<label for="password" class="col-sm-2 control-label">Password:</label>
+  		<input type="password" id="password" ng-model="userData.password" required class="form-control selectBoxSize"/>
  	</p>
  	<p>
-  		<label for="confirmPassword">Confirm Password:</label>
-  		<input type="password" id="confirmPassword" ng-model="userData.confirmPassword" required />
+  		<label for="confirmPassword" class="col-sm-2 control-label">Confirm Password:</label>
+  		<input type="password" id="confirmPassword" ng-model="userData.confirmPassword" required class="form-control selectBoxSize"/>
  	</p>
  	 <p>
-  		<label for="name">Name:</label>
-  		<input type="text" id="name" ng-model="userData.name" required />
+    <label for="name" class="col-sm-2 control-label">Name:</label>
+      <input type="text" id="name" ng-model="userData.name" required class="form-control selectBoxSize"/>
  	</p>
 	<p>
-  		<label for="email">Email:</label>
-  		<input type="email" id="email" ng-model="userData.email" required />
+  		<label for="email" class="col-sm-2 control-label">Email:</label>
+  		<input type="email" id="email" ng-model="userData.email" required class="form-control selectBoxSize"/>
  	</p>
  	 	<p>
-  		<label for="phone">Phone:</label>
-  		<input type="text" id="phone" ng-model="userData.phone" required />
+  		<label for="phone" class="col-sm-2 control-label">Phone:</label>
+  		<input type="text" id="phone" ng-model="userData.phone" required class="form-control selectBoxSize"/>
  	</p>
 	<p>
-  		<label for="town">Town:</label>
-  		<select id="town" ng-model="userData.townId">
+  		<label for="town" class="col-sm-2 control-label">Town:</label>
+  		<select id="town" ng-model="userData.townId" class="form-control selectBoxSize">
         <option value="null">(none)</option>
   			<option ng-repeat="town in towns" value="{{tonw.id}}">{{town.name}}</option>
   		</select>
  	</p>
  	<p>
  		<a ng-click="register(userData)" class="button">Register</a>
- 		<a href="#/login" class="link">Login</a>
+ 		<a href="#/login" class="button">Login</a>
  	</p>
 </div>

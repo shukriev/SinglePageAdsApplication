@@ -1,44 +1,45 @@
 <div class="box">
     <h2>Edit Ad</h2>
-    <div>
-        <label for="title">Title:</label>
-        <input type="text" id="title" ng-model="adData.title"/>
-    </div>
-    <div>
-        <label for="text">Text:</label>
-        <input type="text" id="text" ng-model="adData.text"/>
-    </div>
-    <div>
-        <label for="category">Category:</label>
-        <select id="category" ng-model="adData.categoryId">
-            <option value="null">(None)</option>
-            <option ng-repeat="c in categories" value="{{c.id}}">{{c.name}}</option>
-        </select>
-    </div>
-    <div>
-        <label for="town">Town:</label>
-        <select id="town" ng-model="adData.townId">
-            <option value="null">(None)</option>
-            <option ng-repeat="t in towns" value="{{t.id}}">{{t.name}}</option>
-        </select>
-    </div>
-    <div>
-        <label for="image">Image:</label>
-        <input ng-model="adData.imageUrl" type="file" id="image" onchange="angular.element(this).scope().fileSelected(this)"/>
-        <img class="image-box" ng-if="adData.imageDataUrl" ng-src="{{adData.imageDataUrl}}"/><br />
-    </div>
-    <div>
-
-        <div class="image-box" ng-if="!adData.imageDataUrl">
+    <div class="editInfo">
+        <div>
+            <label for="title" class="col-sm-2 control-label">Title:</label>
+            <input type="text" id="title" ng-model="adData.title"  class="form-control selectBoxSize"/>
         </div>
+        <div>
+            <label for="text" class="col-sm-2 control-label">Text:</label>
+            <input type="text" id="text" ng-model="adData.text" class="form-control selectBoxSize"/>
+        </div>
+        <div>
+            <label for="category" class="col-sm-2 control-label">Category:</label>
+            <select id="category" ng-model="adData.categoryId" class="form-control selectBoxSize">
+                <option value="null">(None)</option>
+                <option ng-repeat="c in categories" value="{{c.id}}">{{c.name}}</option>
+            </select>
+        </div>
+        <div>
+            <label for="town" class="col-sm-2 control-label">Town:</label>
+            <select id="town" ng-model="adData.townId" class="form-control selectBoxSize">
+                <option value="null">(None)</option>
+                <option ng-repeat="t in towns" value="{{t.id}}">{{t.name}}</option>
+            </select>
+        </div>
+        <div>
+            <label for="image" class="col-sm-2 control-label">Image:</label>
+            <input ng-model="adData.imageUrl" type="file" id="image" onchange="angular.element(this).scope().fileSelected(this)" class="form-control selectBoxSize"/>
+            <br>
+            <img class="image-box imageMine" style="margin-left:175px;" ng-if="adData.imageDataUrl" ng-src="{{adData.imageDataUrl}}"/><br />
+        </div>
+        <div>
 
-        <br />
+            <div class="image-box" ng-if="!adData.imageDataUrl">
+            </div>
 
-        <a class="button" ng-click="deleteAdImage(adData)">Delete Image</a>
-        <a class="button" ng-click="changeAdImage(adData)">Change Image</a>
+            <br />
 
-
-        <a ng-click="editUserAds(adData)" class="button">Edit</a>
-        <a href="#/user/ads" class="button">Cancel</a>
+            <a class="button" ng-click="deleteAdImage(adData)">Delete Image</a>
+            <a class="button" ng-click="changeAdImage(adData)">Change Image</a>
+            <a ng-click="editUserAds(adData)" class="button">Edit</a>
+            <a href="#/user/ads" class="button">Cancel</a>
+        </div>
     </div>
 </div>
