@@ -4,8 +4,8 @@ body {
 }
 
 #app-header {
-    background-color: #A9D18E;
-    border: #507E32 1px solid;
+    background-color: #0099FA;
+    border: #FFFFFF 1px solid;
     text-align: center;
     padding: 5px;
     font-size: 16pt;
@@ -28,8 +28,8 @@ body {
 
 #app-footer {
     clear: both;
-    background-color: #A9D18E;
-    border: #507E32 1px solid;
+    background-color: #0099FA;
+    border: #FFFFFF 1px solid;
     text-align: center;
     padding: 5px;
     font-size: 12pt;
@@ -55,21 +55,24 @@ ul.ads li {
 .box {
     width: 100%;
     display: block;
-    background: #A9D18E;
-    border: #507E32 1px solid;
+    background: #0099FA;
+    border: #FFFFFF 1px solid;
     margin: 15px 0;
     padding: 10px;
     box-shadow: rgba(80, 126, 50, 0.5) 0.5px 0.5px 3px;
 
     border-top-left-radius: 15px;
     border-bottom-right-radius: 15px;
+    -webkit-box-shadow: 0px -32px 300px -147px rgba(0,153,250,1);
+    -moz-box-shadow: 0px -32px 300px -147px rgba(0,153,250,1);
+    box-shadow: 0px -32px 300px -147px rgba(0,153,250,1);
 }
 
 .box h1 {
     margin: 0 0 10px 0;
     font-size: 18pt;
     font-weight: bold;
-    color: black;
+    color: #06141C;
     text-shadow: rgba(255, 255, 255, 0.5) 0.3px 0.3px 1px;
 }
 
@@ -77,7 +80,7 @@ ul.ads li {
     margin: 0 0 10px 0;
     font-size: 16pt;
     font-weight: bold;
-    color: black;
+    color: #06141C;
     text-shadow: rgba(255, 255, 255, 0.5) 0.3px 0.3px 1px;
 }
 
@@ -90,11 +93,14 @@ ul.sidebar-menu li {
     cursor: pointer;
     border: 1px solid rgba(0,0,0,0);
     padding: 2px;
-    color: #1c381c;
+    color: #071F2E;
+    font-size: 15px;
+    font-weight: 500;
 }
 
 ul.sidebar-menu li:hover {
-    background: #9ec684; ;
+    background: #80CEFF;
+    border-radius: 5px;
 }
 
 ul.sidebar-menu li.special {
@@ -102,15 +108,18 @@ ul.sidebar-menu li.special {
 }
 
 ul.sidebar-menu li.selected {
-    background: #DAA600;
-    border: 1px solid #7F6000;
+    background: blue;
+    font-size: 25px;
+    font-weight: bolder;
+    color:#FFFFFF;
+    border: 1px solid #FFFFFF;
 }
 
 ul.sidebar-menu li a, ul.sidebar-menu li a:focus {
     outline: none;
     display: block;
     text-decoration: none;
-    color: #1c381c;
+    color: #FFFFFF;
 }
 
 .button, .button:focus {
@@ -118,8 +127,8 @@ ul.sidebar-menu li a, ul.sidebar-menu li a:focus {
     font-size: 14px;
     font-weight: bold;
     text-shadow: rgba(0, 0, 0, 0.5) 1px 1px 1px;
-    background: #70AD47;
-    border: 2px solid #507E32;
+    background: #0099FA;
+    border: 2px solid #FFFFFF;
     border-radius: 5px;
     text-decoration: none;
     padding: 5px 20px;
@@ -129,16 +138,16 @@ ul.sidebar-menu li a, ul.sidebar-menu li a:focus {
 }
 
 .button:hover {
-    background: #87c649;
-    border: 2px solid #649636;
+    background: #FFFFFF;
+    border: 2px solid #0099FA;
+    color: #0099FA;
     text-decoration: none;
-    color: white;
     text-shadow: rgba(0, 0, 0, 0.5) 1px 1px 1px;
     cursor: pointer;
 }
 
 .link {
-    color: #2E75B6;
+    color: #FFFFFF;
     text-decoration: none;
     padding: 0;
     border-bottom: 1px dotted #2E75B6;
@@ -146,7 +155,7 @@ ul.sidebar-menu li a, ul.sidebar-menu li a:focus {
 }
 
 .link:hover {
-    color: #29619d;
+    color: blue;
     text-decoration: none;
 }
 
@@ -201,8 +210,11 @@ ul.sidebar-menu li a, ul.sidebar-menu li a:focus {
 .mainInformation > div {
     margin-bottom: 10px;
     margin-bottom: 10px;
-    background-color: rgb(147, 197, 113);
+    background-color: #80CEFF;
     border: 1px;
+    color: #071F2E;
+    text-shadow: rgba(255, 255, 255, 0.5) 0.5px 0.5px 1px;
+
     border-radius: 20px;
     padding-left: 15px;
     padding-right: 15px;
@@ -213,7 +225,7 @@ ul.sidebar-menu li a, ul.sidebar-menu li a:focus {
 }
 
 .mainInformation > .tricky {
-    background-color:#A9D18E;
+    background-color:#0099FA;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
@@ -222,8 +234,9 @@ ul.sidebar-menu li a, ul.sidebar-menu li a:focus {
 .titleAndImage > #time {
     margin-bottom: 10px;
     margin-bottom: 10px;
-    background-color: rgb(147, 197, 113);
+    background-color: #80CEFF;
     border: 1px;
+    color: #071F2E;
     border-radius: 20px;
     padding-left: 15px;
     padding-right: 15px;
@@ -237,7 +250,7 @@ ul.sidebar-menu li a, ul.sidebar-menu li a:focus {
     border: 1px solid rgb(144, 169, 120);
     width: 170px;
     padding: 5px;
-    background-color: rgb(147, 197, 113);
+    background-color: #80CEFF;
     border-bottom-right-radius: 15px;
     border-top-left-radius: 15px;
     -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
@@ -247,8 +260,10 @@ ul.sidebar-menu li a, ul.sidebar-menu li a:focus {
 .editInfo label {
     font-size: 20px;
     text-align: left;
+    color: #071F2E;
 }
 
 .selectBoxSize{
     width: 200px;
+    margin-top: 5px;
 }
