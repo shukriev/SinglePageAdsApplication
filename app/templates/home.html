@@ -2,28 +2,32 @@
 </pagination>
 
 <ul class="ads">
-	<li ng-repeat="ad in ads.ads" class="box" data-id="{{ad.id}}">
-		<h1>{{ad.title}}</h1>
-		<div><strong>Date:</strong> {{ad.date | date: 'dd-MM-yyyy'}} </div>
-		<div ng-if='ad.imageDataUrl'>
-            <strong>Image:</strong>
-            <img class="ad-image" ng-src="{{ad.imageDataUrl}}" />
+	<li ng-repeat="ad in ads.ads" class="box" style="display: flex;" data-id="{{ad.id}}">
+        <div class="titleAndImage">
+    		<h1>{{ad.title}}</h1>
+    		<div id="time"><strong>Date:</strong> {{ad.date | date: 'dd-MM-yyyy'}} </div>
+    		<div ng-if='ad.imageDataUrl' class="imageMineContainer">
+                <!-- <strong>Image:</strong> -->
+                <img class="ad-image imageMine" ng-src="{{ad.imageDataUrl}}" />
+            </div>
         </div>
-        <div ng-if='ad.text'>
-            <strong>Text:</strong>
-            {{ad.text}}
-        </div>
-        <div ng-if='ad.ownerName'>
-            <strong>Name:</strong>
-            {{ad.ownerName}}
-        </div>
-        <div ng-if='ad.ownerEmail'>
-            <strong>Email:</strong>
-            {{ad.ownerEmail}}
-        </div>
-        <div ng-if='ad.ownerPhone'>
-            <strong>Phone:</strong>
-            {{ad.ownerPhone}}
+        <div class="mainInformation">
+            <div ng-if='ad.text'>
+                <strong>Text:</strong>
+                {{ad.text}}
+            </div>
+            <div ng-if='ad.ownerName'>
+                <strong>Name:</strong>
+                {{ad.ownerName}}
+            </div>
+            <div ng-if='ad.ownerEmail'>
+                <strong>Email:</strong>
+                {{ad.ownerEmail}}
+            </div>
+            <div ng-if='ad.ownerPhone'>
+                <strong>Phone:</strong>
+                {{ad.ownerPhone}}
+            </div>
         </div>
     </li>
 </ul>

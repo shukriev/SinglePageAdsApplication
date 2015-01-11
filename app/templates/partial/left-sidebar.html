@@ -42,10 +42,10 @@
 <div ng-if='pageTitle === "My Ads"' class="box" ng-controller="UserAdsController">
     <h2>My Ads</h2>
     <ul class="sidebar-menu">
-        <li><a href="#/user/ads">All</a></li>
-        <li><a ng-click="filterUserAd()" href="#/user/ads/filter/2">Published</a></li>
-        <li><a ng-click="filterUserAd()" href="#/user/ads/filter/1">Waiting Approval</a></li>
-        <li><a ng-click="filterUserAd()" href="#/user/ads/filter/0">Inactive</a></li>
-        <li><a ng-click="filterUserAd()" href="#/user/ads/filter/3">Rejected</a></li>
+        <li><a href="#/user/ads" class="button">All</a></li>
+        <li><a ng-click="filterUserAd()" href="#/user/ads/filter/2" class="button">Published</a></li>
+        <li><a ng-click="filterUserAd()" href="#/user/ads/filter/1" class="button">Waiting Approval</a></li>
+        <li><a ng-click="filterUserAd()" href="#/user/ads/filter/0" class="button">Inactive</a></li>
+        <li><a ng-click="filterUserAd()" href="#/user/ads/filter/3" class="button">Rejected</a></li>
     </ul>
 </div>
