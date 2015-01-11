@@ -38,6 +38,35 @@ app.controller('UserEditAdController',
             )
         };
 
+         $scope.deleteAdImage = function(adData) {
+            adData.imageDataUrl = null;
+            adData.changeImage = true;
+            userService.deleteAdImages(
+                adData,
+                function success(data) {
+                    notifyService.showInfo('Successfully deleted image');
+                    $location.path("/user/ads/edit/" + adData.id);
+                },
+                function error(err) {
+                    notifyService.showError('Cannot delete image', err);
+                }
+            )
+        };
+
+        $scope.changeAdImage = function(adData) {
+            adData.changeImage = true;
+            userService.changeAdImages(
+                adData,
+                function success(data) {
+                    notifyService.showInfo('Successfully changed image');
+                    $location.path("/user/ads/edit/" + adData.id);
+                },
+                function error(err) {
+                    notifyService.showError('Cannot change image', err);
+                }
+            )
+        };
+
         $scope.fileSelected = function(fileInputField) {
             delete $scope.adData.imageDataUrl;
             var file = fileInputField.files[0];

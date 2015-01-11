@@ -25,10 +25,19 @@
     <div>
         <label for="image">Image:</label>
         <input ng-model="adData.imageUrl" type="file" id="image" onchange="angular.element(this).scope().fileSelected(this)"/>
-        <img ng-src="{{adData.imageDataUrl}}"/><br />
-        <a class="button">Delete Image</a>
+        <img class="image-box" ng-if="adData.imageDataUrl" ng-src="{{adData.imageDataUrl}}"/><br />
     </div>
     <div>
+
+        <div class="image-box" ng-if="!adData.imageDataUrl">
+        </div>
+
+        <br />
+
+        <a class="button" ng-click="deleteAdImage(adData)">Delete Image</a>
+        <a class="button" ng-click="changeAdImage(adData)">Change Image</a>
+
+
         <a ng-click="editUserAds(adData)" class="button">Edit</a>
         <a href="#/user/ads" class="button">Cancel</a>
     </div>

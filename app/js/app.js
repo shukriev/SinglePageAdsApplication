@@ -3,7 +3,7 @@
 var app = angular.module('app', ['ngRoute', 'ngResource', 'ui.bootstrap.pagination']);
 
 app.constant('baseServiceUrl', 'http://softuni-ads.azurewebsites.net');
-app.constant('pageSize', 2);
+app.constant('pageSize', 7);
 
 app.config(function ($routeProvider) {
 
@@ -50,6 +50,11 @@ app.config(function ($routeProvider) {
     $routeProvider.when('/user/ads/changePassword/', {
         templateUrl: 'templates/user/change-user-password.html',
         controller: 'UserChangePasswordController'
+    });
+
+    $routeProvider.when('/user/ads/filter/:status', {
+        templateUrl: 'templates/user/filter-user-ads.html',
+        controller: 'UserAdsFilterController'
     });
 
     $routeProvider.otherwise(

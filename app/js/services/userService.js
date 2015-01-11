@@ -96,6 +96,35 @@ app.factory('userService',
                     data: JSON.stringify(data)
                 };
                 $http(request).success(success).error(error);
+            },
+
+            deleteAdImages: function (data, success, error) {
+                var request = {
+                    method: 'PUT',
+                    url: baseServiceUrl + '/api/user/ads/' + data.id,
+                    headers: authService.getAuthHeaders(),
+                    data: JSON.stringify(data)
+                };
+                $http(request).success(success).error(error);
+            },
+
+            changeAdImages: function (data, success, error) {
+                var request = {
+                    method: 'PUT',
+                    url: baseServiceUrl + '/api/user/ads/' + data.id,
+                    headers: authService.getAuthHeaders(),
+                    data: JSON.stringify(data)
+                };
+                $http(request).success(success).error(error);
+            },
+
+            filterUserAds: function (params, status, success, error) {
+                var request = {
+                    method: 'GET',
+                    url: baseServiceUrl + '/api/user/ads?Status=' + status + '&StartPage='+ params.startPage +'&PageSize='+ params.pageSize +'',
+                    headers: authService.getAuthHeaders()
+                };
+                $http(request).success(success).error(error);
             }
         }
     }
